@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Roll Simulator</h1>
+        <div class="dice-container">
+            <div id="dice1" class="dice">
+                <div class="face front">1</div>
+                <div class="face back">1</div>
+                <div class="face left">1</div>
+                <div class="face right">1</div>
+                <div class="face top">1</div>
+                <div class="face bottom">1</div>
+            </div>
+            <div id="dice2" class="dice">
+                <div class="face front">1</div>
+                <div class="face back">1</div>
+                <div class="face left">1</div>
+                <div class="face right">1</div>
+                <div class="face top">1</div>
+                <div class="face bottom">1</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="rollDice('one')">Roll One Dice</button>
+            <button onclick="rollDice('two')">Roll Two Dice</button>
+        </div>
+        <div class="result">
+            <p id="result">Roll the dice to see the result!</p>
+        </div>
+        <div class="stats">
+            <p>Total Rolls: <span id="total-rolls">0</span></p>
+            <p>Average Roll: <span id="average-roll">0</span></p>
+            <p>Frequency of Each Roll: <span id="frequency">0</span></p>
+        </div>
+        <div class="settings">
+            <button onclick="changeTheme('classic')">Classic Theme</button>
+            <button onclick="changeTheme('futuristic')">Futuristic Theme</button>
+            <button onclick="changeTheme('cartoonist')">Cartoonist Theme</button>
+            <button onclick="changeTheme('traditional')">Traditional Theme</button>
+        </div>
+    </div>
+    <audio id="roll-sound" src="roll-sound.mp3" preload="auto"></audio>
+    <script src="scripts.js"></script>
+</body>
+</html>
